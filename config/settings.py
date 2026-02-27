@@ -23,6 +23,7 @@ else:
 
 
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = ['iskandar123456.pythonanywhere.com']
 
 
 # Application definition
@@ -37,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'deploy',
     'rest_framework',
-    'corsheaders',
-   
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -118,6 +118,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / 'media'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # This is a list of additional directories where Django will look for static files 
 # during development (and for collectstatic to copy from).
